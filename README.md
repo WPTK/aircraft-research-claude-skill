@@ -108,4 +108,4 @@ Be a good grown up.
 
 ## License
 
-CC BY-SA 4.0. Use it, adapt it, credit the source, and keep your version under the same license. Swap to AGPLv3 if you want the code-flavored strong copyleft instead.
+CC BY-SA 4.0.
