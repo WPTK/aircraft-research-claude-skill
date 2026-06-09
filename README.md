@@ -1,4 +1,4 @@
-# Aircraft Research OSINT Claude Skill
+# Aircraft Research OSINT Skill
 
 An [Anthropic Agent Skill](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) that turns Claude into an open-source aircraft ownership researcher. Give it a tail number, an ADS-B screenshot, or pasted registry text, and it traces the ownership chain from the FAA record down to real people and a likely purpose, then returns a structured dossier.
 
