@@ -1,6 +1,6 @@
 # Aircraft Research OSINT Skill
 
-An [Anthropic Agent Skill](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) that turns Claude into an open-source aircraft ownership researcher. Give it a tail number, an ADS-B screenshot, or pasted registry text, and it traces the ownership chain from the FAA record down to real people and a likely purpose, then returns a structured dossier.
+An Agent Skill that turns an AI agent into an open-source aircraft ownership researcher. Give it a tail number, an ADS-B screenshot, or pasted registry text, and it traces the ownership chain from the FAA record down to real people and a likely purpose, then returns a structured dossier.
 
 This is N-number (US) focused. Non-US registrations are supported with a different source set, but the deep workflow assumes US registry data.
 
@@ -47,13 +47,13 @@ Every dossier ends with a confidence call (High / Medium / Low / Withheld) and t
 
 ## How it works
 
-An Agent Skill is a folder containing a `SKILL.md` file. The YAML frontmatter holds a `name` and a `description`; the description is what Claude uses to decide when to load the skill, and the body is the instruction set Claude follows once it triggers. There is no code to run. The intelligence is in the prompt.
+An Agent Skill is a folder containing a `SKILL.md` file. The YAML frontmatter holds a `name` and a `description`; the description is what the agent uses to decide when to load the skill, and the body is the instruction set the agent follows once it triggers. There is no code to run. The intelligence is in the prompt.
 
 This skill leans heavily on web search. The FAA registry web form requires JavaScript and cannot be fetched directly, so the workflow is **search before fetch**: it queries indexed mirrors (including localized FlightAware subdomains that surface gated registration records in search snippets) and cross-references across sources instead of trusting any single one.
 
 ## Requirements
 
-- A Claude surface that supports Agent Skills and has web search available (for example Claude Code, or the API with the skills capability enabled).
+- An agent or harness that supports Agent Skills and has web search available.
 - No API keys, dependencies, or build step inside the skill itself.
 
 ## Usage
